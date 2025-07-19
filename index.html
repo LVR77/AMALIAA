@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AMALIAAA</title>
   <style>
-    /* Tema oscuro */
     body {
       background-color: #121212;
       color: #fff;
@@ -17,7 +16,6 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Botón rojo grande para mobile */
     button {
       background-color: #e60000;
       color: #fff;
@@ -31,24 +29,21 @@
       touch-action: manipulation;
     }
 
-    /* Efecto al presionar (mobile friendly) */
     button:active {
       transform: scale(0.95);
-      background-color: #cc0000; /* un poco más oscuro */
+      background-color: #cc0000;
       box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     }
   </style>
 </head>
 <body>
   <button id="amalia">AMALIAAA</button>
-  <audio id="audio" src="Amalia.mp3"></audio>
 
   <script>
     const btn = document.getElementById('amalia');
-    const audio = document.getElementById('audio');
 
     btn.addEventListener('click', () => {
-      audio.currentTime = 0; // Reinicia el audio
+      const audio = new Audio('Amalia.mp3'); // O "assets/Amalia.mp3" si está en carpeta
       audio.play();
     });
   </script>
