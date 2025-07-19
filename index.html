@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMALIAAA</title>
+  <style>
+    /* Tema oscuro */
+    body {
+      background-color: #121212;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Botón rojo grande para mobile */
+    button {
+      background-color: #e60000;
+      color: #fff;
+      font-size: 2rem;
+      padding: 20px 50px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+      transition: transform 0.1s ease, background-color 0.1s ease;
+      touch-action: manipulation;
+    }
+
+    /* Efecto al presionar (mobile friendly) */
+    button:active {
+      transform: scale(0.95);
+      background-color: #cc0000; /* un poco más oscuro */
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <button id="amalia">AMALIAAA</button>
+  <audio id="audio" src="amalia.mp3"></audio>
+
+  <script>
+    const btn = document.getElementById('amalia');
+    const audio = document.getElementById('audio');
+
+    btn.addEventListener('click', () => {
+      audio.currentTime = 0; // Reinicia el audio
+      audio.play();
+    });
+  </script>
+</body>
+</html>
